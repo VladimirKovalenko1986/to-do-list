@@ -1,21 +1,21 @@
 {
-  "name": "parcel-project-template",
+  "name": "to-do-list",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://VladimirKovalenko1986.github.io/to-do-list",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /to-do-list/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/VladimirKovalenko1986/to-do-list.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Volodymyr Kovalenko <dante77758@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/VladimirKovalenko1986/to-do-list/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"

@@ -53,7 +53,7 @@ function handleTaskBehaviour({ target }) {
 const createTaskObject = (text, isDone) => ({ text, isDone, id: currentId });
 
 function addTaskToStorage(text, isDone = false) {
-  const currentState = load(STORAGE_KEY);
+  const currentState = load(STORAGE_KEY) || [];
   const newTask = createTaskObject(text, isDone);
   if (currentState === undefined) {
     save(STORAGE_KEY, [newTask]);
@@ -66,10 +66,12 @@ function addTaskToStorage(text, isDone = false) {
 
 function fillTasksList() {
   const currentState = load(STORAGE_KEY);
-  if (currentState !== undefined) {
+  if (currentState !== undefined && currentState.length > 0) {
     currentState.forEach(({ text, isDone, id }) => createLi(text, isDone, id));
+    currentId = currentState[currentState.length - 1].id + 1;
+  } else {
+    currentId = 1; // Якщо currentState порожній, то встановлюємо початковий ID
   }
-  currentId = currentState[currentState.length - 1].id + 1;
 }
 
 // Додаємо функцію крестику

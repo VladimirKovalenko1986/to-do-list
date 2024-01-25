@@ -5,7 +5,8 @@ const save = (key, value) => {
     const serializedData = JSON.stringify(value);
     localStorage.setItem(key, serializedData);
   } catch (err) {
-    console.error(err.mesage);
+    console.error(err.message);
+    throw err;
   }
 };
 
@@ -19,6 +20,7 @@ const load = key => {
     return serializedData === null ? undefined : JSON.parse(serializedData);
   } catch (err) {
     console.error(err.message);
+    throw err;
   }
 };
 
